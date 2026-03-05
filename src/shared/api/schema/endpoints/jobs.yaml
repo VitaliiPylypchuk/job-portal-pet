@@ -1,0 +1,25 @@
+schemas:
+  Job:
+    type: object
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+
+getAllJobs:
+  summary: Get all jobs for main page
+  responses:
+    '200':
+      description: List of jobs
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/schemas/Job'
+    '401':
+      $ref: '../shared/responses.yaml#/UnauthorizedError'

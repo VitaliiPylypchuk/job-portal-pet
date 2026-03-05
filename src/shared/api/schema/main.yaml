@@ -1,0 +1,10 @@
+openapi: 3.0.0
+info:
+  title: Job Portal Pet Project API
+  description: API for Job Portal pet project
+  version: 1.0.0
+paths:
+  /jobs:
+    get:
+      $ref: "./endpoints/jobs.yaml#/getAllJobs"
+
