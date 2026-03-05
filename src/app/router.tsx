@@ -1,10 +1,14 @@
 import {createBrowserRouter, redirect} from "react-router-dom";
 import App from "@/app/App.tsx";
 import {ROUTES} from "@/shared/model/routes.ts";
+import {Providers} from "@/app/providers.tsx";
 
 export const router = createBrowserRouter([
   {
-    element: <App/>,
+    element:
+      <Providers>
+        <App/>
+      </Providers>,
     children: [
       {
         path: ROUTES.JOBS,
