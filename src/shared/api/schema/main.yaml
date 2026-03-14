@@ -4,6 +4,15 @@ info:
   description: API for Job Portal pet project
   version: 1.0.0
 paths:
+
+  /auth/login:
+    post:
+      $ref: "./endpoints/auth.yaml#/login"
+
+  /auth/register:
+    post:
+      $ref: "./endpoints/auth.yaml#/register"
+
   /jobs:
     get:
       $ref: "./endpoints/jobs.yaml#/getAllJobs"
